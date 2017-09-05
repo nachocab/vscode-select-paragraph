@@ -9,8 +9,9 @@ function activate(context) {
     while (startLine > 0 && !editor.document.lineAt(startLine - 1).isEmptyOrWhitespace) {
       startLine -= 1;
     }
-    
-    while (endLine < editor.document.lineCount && !editor.document.lineAt(endLine + 1).isEmptyOrWhitespace) {
+
+    while (endLine < editor.document.lineCount - 1 && 
+      !editor.document.lineAt(endLine + 1).isEmptyOrWhitespace) {
       endLine += 1;
     }
 

@@ -1,18 +1,20 @@
 # Select Paragraph
 
-Expand the current selection until it hits a whitespace boundary (port of `expand_selection_to_paragraph` from Sublime Text).
+Expand the current selection until it hits a whitespace boundary (port of `expand_selection_to_paragraph` from Sublime Text). If you have this text:
 
-## Features
+```
+line 1
 
-\!\[feature X\]\(images/feature-x.png\)
+line 2
+line 3| <= cursor here
+line 4
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+line 5
+```
+
+After running Select Paragraph, the selection will hold lines 2 through 4.
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the command `extension.selectParagraph` and the keybinding `ctrl + p`
+This extension contributes the command `select-paragraph.selectParagraph` and the keybinding `ctrl + p`.
 
