@@ -44,5 +44,6 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/nachocab/vscode-select-paragraph"
-    }
+    },
+    "extensionKind": "ui"
 }
