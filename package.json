@@ -1,49 +1,49 @@
 {
-    "name": "select-paragraph",
-    "displayName": "Select Paragraph",
-    "description": "Select contiguous lines until you reach an empty line",
-    "version": "0.1.1",
-    "publisher": "nachocab",
-    "engines": {
-        "vscode": "^1.15.0"
-    },
-    "categories": [
-        "Other"
+  "name": "select-paragraph",
+  "displayName": "Select Paragraph",
+  "description": "Select contiguous lines until you reach an empty line",
+  "version": "0.1.1",
+  "publisher": "nachocab",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:select-paragraph.selectParagraph"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "select-paragraph.selectParagraph",
+        "title": "Select Paragraph"
+      }
     ],
-    "activationEvents": [
-        "onCommand:select-paragraph.selectParagraph"
-    ],
-    "main": "./extension",
-    "contributes": {
-        "commands": [
-            {
-                "command": "select-paragraph.selectParagraph",
-                "title": "Select Paragraph"
-            }
-        ],
-        "keybindings": [
-            {
-                "command": "select-paragraph.selectParagraph",
-                "key": "ctrl+p",
-                "when": "editorTextFocus"
-            }
-        ]
-    },
-    "scripts": {
-        "postinstall": "node ./node_modules/vscode/bin/install",
-        "test": "node ./node_modules/vscode/bin/test"
-    },
-    "devDependencies": {
-        "typescript": "^2.5.2",
-        "vscode": "^1.1.37",
-        "mocha": "^10.8.2",
-        "eslint": "^9.6.0",
-        "@types/node": "^8.0.26",
-        "@types/mocha": "^2.2.42"
-    },
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/nachocab/vscode-select-paragraph"
-    },
-    "extensionKind": "ui"
+    "keybindings": [
+      {
+        "command": "select-paragraph.selectParagraph",
+        "key": "ctrl+p",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^2.2.42",
+    "@types/node": "^8.0.26",
+    "@types/vscode": "^1.74.0",
+    "eslint": "^8.31.0",
+    "mocha": "^10.2.0",
+    "typescript": "^2.5.2",
+    "vscode-test": "^1.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nachocab/vscode-select-paragraph"
+  }
 }
